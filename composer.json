@@ -1,0 +1,23 @@
+{
+  "name": "itmosoft/laravel-campaign-tracking",
+  "description": "UTM attribution, campaign touchpoints, conversion recording, and attribution summaries for Laravel applications.",
+  "type": "library",
+  "license": "MIT",
+  "require": {
+    "php": "^8.3",
+    "illuminate/contracts": "^12.0 || ^13.0",
+    "illuminate/database": "^12.0 || ^13.0",
+    "illuminate/support": "^12.0 || ^13.0",
+    "illuminate/validation": "^12.0 || ^13.0"
+  },
+  "require-dev": {
+    "orchestra/testbench": "^10.0 || ^11.0",
+    "phpunit/phpunit": "^11.5 || ^12.0"
+  },
+  "autoload": {"psr-4": {"ItmoSoft\\CampaignTracking\\": "src/"}},
+  "autoload-dev": {"psr-4": {"ItmoSoft\\CampaignTracking\\Tests\\": "tests/"}},
+  "extra": {"laravel": {"providers": ["ItmoSoft\\CampaignTracking\\CampaignTrackingServiceProvider"]}},
+  "scripts": {"test": "phpunit"},
+  "minimum-stability": "stable",
+  "prefer-stable": true
+}
