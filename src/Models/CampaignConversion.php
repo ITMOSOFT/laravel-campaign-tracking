@@ -16,11 +16,17 @@ class CampaignConversion extends Model
 
     protected function casts(): array
     {
-        return ['metadata' => 'array', 'converted_at' => 'datetime', 'value' => 'decimal:4'];
+        return [
+            'metadata' => 'array',
+            'converted_at' => 'datetime',
+        ];
     }
 
-    public function touch(): BelongsTo
+    public function campaignTouch(): BelongsTo
     {
-        return $this->belongsTo(config('itmosoft-campaign-tracking.models.touch'), 'touch_id');
+        return $this->belongsTo(
+            config('itmosoft-campaign-tracking.models.touch'),
+            'touch_id'
+        );
     }
 }
